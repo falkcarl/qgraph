@@ -76,7 +76,7 @@ cor_auto <- function(
     if(!requireNamespace("huge")) stop("'huge' package needs to be installed.")
     CorMat <- huge::huge.npn(data, "skeptic")
   } else {
-    CorMat <- lavaan::lavCor(data, missing = missing, h1=T)
+    CorMat <- lavaan::lavCor(data, missing = missing)
     class(CorMat) <- "matrix"
   }
 
